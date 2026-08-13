@@ -78,11 +78,9 @@ summary {
 }
 
 .site-header {
-  position: absolute;
+  position: static;
   z-index: 50;
-  top: 0;
-  right: 0;
-  left: 0;
+  background: var(--ink);
   color: var(--paper);
 }
 
@@ -1054,7 +1052,7 @@ summary {
 }
 
 .legal-page { min-height: 100vh; background: var(--paper); }
-.legal-page .site-header { position: relative; background: var(--ink); }
+.legal-page .site-header { background: var(--ink); }
 .legal-hero { background: var(--ink); color: var(--paper); padding: 110px 0 90px; }
 .legal-hero .eyebrow { color: var(--accent); }
 .legal-hero h1 { max-width: 850px; font-size: clamp(3rem, 7vw, 6.8rem); line-height: 0.98; }
