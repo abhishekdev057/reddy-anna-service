@@ -1,11 +1,6 @@
 import { GraphicIcon } from "@/components/ui/graphic-icon";
+import { CustomerSupportIllustration } from "@/components/ui/customer-support-illustration";
 import { WhatsAppButton } from "@/components/ui/whatsapp-button";
-
-const orbitItems = [
-  { label: "Explore", icon: "play" as const, position: "top" },
-  { label: "Have fun", icon: "sparkle" as const, position: "right" },
-  { label: "Get support", icon: "chat" as const, position: "bottom" },
-] as const;
 
 export function Hero() {
   return (
@@ -45,36 +40,14 @@ export function Hero() {
           </div>
         </div>
 
-        <div className="hero-aside reveal reveal--delay" aria-label="Explore entertainment and get direct support">
-          <div className="hero-aside__top">
-            <span>Connection / 01</span>
-            <span className="status"><i /> Support channel</span>
+        <div className="hero-visual reveal reveal--delay">
+          <div className="hero-visual__art">
+            <span className="hero-visual__halo" aria-hidden="true" />
+            <CustomerSupportIllustration />
           </div>
-
-          <div className="orbit-stage" aria-hidden="true">
-            <div className="orbit-ring orbit-ring--outer">
-              <span className="orbit-dot orbit-dot--one" />
-              <span className="orbit-dot orbit-dot--two" />
-            </div>
-            <div className="orbit-ring orbit-ring--inner" />
-            <div className="orbit-core">
-              <span>Discover</span>
-              <strong>Connect</strong>
-              <small>Together</small>
-            </div>
-            {orbitItems.map((item) => (
-              <div className={`orbit-token orbit-token--${item.position}`} key={item.label}>
-                <GraphicIcon name={item.icon} />
-                <span>{item.label}</span>
-              </div>
-            ))}
-            <span className="orbit-spark orbit-spark--one" />
-            <span className="orbit-spark orbit-spark--two" />
-          </div>
-
-          <div className="hero-aside__bottom">
-            <p>Clear information.<br />Direct communication.</p>
-            <span className="monogram">RA</span>
+          <div className="hero-visual__caption">
+            <span className="hero-visual__kicker"><i /> Human support</span>
+            <p>Real people. Clear answers.<br />One direct conversation.</p>
           </div>
         </div>
       </div>
